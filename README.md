@@ -3,7 +3,8 @@
 ![HTML](https://img.shields.io/badge/HTML-5-blue?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3&logoColor=white)
 
-![image](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/2/60df485eb772ecbad54a.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240108%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240108T094126Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=bdaad2447225add8dc59234938f3c5b7a632d36be8ee38b8b0195ee09058cd65)
+![image](https://github.com/SimonDesc/holbertonschool-headphones/blob/main/60df485eb772ecbad54a.jpg)
+
 
 ## Aperçu
 
