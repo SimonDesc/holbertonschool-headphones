@@ -1,0 +1,590 @@
+@font-face {
+	font-family: 'holberton_school-icon';
+	src: url('../fonts/holberton_school-icon.eot');
+	src: url('../fonts/holberton_school-icon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/holberton_school-icon.woff') format('woff'),
+		url('../fonts/holberton_school-icon.ttf') format('truetype'),
+		url('../fonts/holberton_school-icon.svg#holberton_school-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+
+/* Variables
+	============================= */
+:root {
+	--text-color: white;
+	--primary-red-color: #FF6565;
+	--secondary-red-color: #ff6565d8;
+
+	--font-family: 'Source Sans 3', sans-serif;
+	--font-size-medium: 1rem;
+	--font-size-large: 2rem;
+	--font-weight-regular: 400;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+}
+
+/* Icon
+	============================= */
+.icon {
+	font-family: 'holberton_school-icon';
+	font-size: 100px;
+	color: var(--primary-red-color);
+}
+
+/* Base
+		============================= */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: var(--text-color);
+	font-family: var(--font-family);
+	font-weight: var(--font-weight-regular);
+}
+
+h3 {
+	font-weight: --font-weight-bold;
+	font-size: var(--font-size-large);
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--primary-red-color)
+}
+
+
+/*** 2. LAYOUT ***/
+
+/* Layout
+		============================= */
+.container {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.background-container {
+	background-image: url(../images/headphones_hero_1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+/* Header
+		============================= */
+
+.header {
+	padding: 2rem 0 0;
+	margin-left: 5%;
+	margin-right: 5%;
+	background: transparent;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.header .menu-icon {
+	display: none;
+	cursor: pointer;
+	padding: 2.5rem;
+	position: relative;
+	user-select: none;
+}
+
+.header .menu-icon .navicon {
+	background: white;
+	display: block;
+	width: 2rem;
+	height: 0.2rem;
+	position: relative;
+	transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .navicon::before,
+.header .menu-icon .navicon::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: white;
+	transition: all 0.2s ease-out;
+}
+
+.header .menu-icon .navicon::before {
+	top: 0.7rem;
+}
+
+.header .menu-icon .navicon::after {
+	top: -0.7rem;
+}
+
+/* menu btn
+		============================= */
+.header .menu-btn {
+	display: none;
+}
+
+.menu-btn:checked~.navbar-menu {
+	display: block;
+}
+
+.menu-btn:checked~.navbar-menu .nav {
+	max-height: 100%;
+	/* overflow: inherit; */
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+	background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon::before {
+	transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon::after {
+	transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon::before,
+.header .menu-btn:checked~.menu-icon .navicon::after {
+	top: 0;
+}
+
+/* Navbar
+		============================= */
+
+.nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	display: flex;
+}
+
+.nav ul {
+	display: flex;
+	justify-content: center;
+}
+
+nav a {
+	font-weight: var(--font-weight-bold);
+}
+
+.nav .nav-link {
+	display: block;
+	padding: 0.5rem 0;
+	position: relative;
+	font-weight: var(--font-weight-bold);
+}
+
+.nav .nav-link::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	width: 0;
+	height: 0.2rem;
+	transition: 0.3s cubic-bezier(0.17, 0.67, 0, 1.01);
+}
+
+
+/* Section Hero
+		============================= */
+
+.section-hero {
+	display: flex;
+	margin-top: 5%;
+}
+
+/* Section body
+		============================= */
+
+.section-body {
+	padding: var(--section-body-padding);
+	font-size: var(--font-size-medium);
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.section-hero .section-body {
+	padding: 17rem 0 4rem;
+}
+
+/* Section inner
+		============================= */
+
+.section-inner {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5%;
+	text-align: center;
+}
+
+.section-inner h3 {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.section-inner h4 {
+	text-align: center;
+	margin-top: 0;
+}
+
+.margin-inner {
+	margin-bottom: 50px;
+}
+
+/* Button
+		============================= */
+.button {
+	font-weight: var(--font-weight-bold);
+}
+
+.section-inner .button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 170px;
+	height: 50px;
+	background-color: var(--primary-red-color);
+	border-radius: 22px;
+}
+
+.section-inner p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	line-height: 26px;
+	margin-top: 10%;
+}
+
+.button:hover {
+	color: white;
+	background-color: var(--secondary-red-color);
+}
+
+.section-icon .paragraph-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0;
+}
+
+/* Section what we do
+		============================= */
+
+.section-icon {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.section-what-we-do {
+	background-color: white;
+	color: black;
+	margin-top: 40px;
+}
+
+.section-what-we-do h3 {
+	font-weight: var(--font-weight-semibold);
+}
+
+
+.section-what-we-do .container {
+	padding-bottom: 5%;
+}
+
+
+/* Section Our Results
+		============================= */
+.section-our-result {
+	background-image: url(../images/headphones_hero_2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.section-our-result h3 {
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+
+.pentagon-1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	width: 187.5px;
+	height: 180px;
+	background: var(--primary-red-color);
+	clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+	margin: auto;
+	margin-bottom: 15%;
+}
+
+.pentagon-1 h3 {
+	margin-top: 10px;
+}
+
+.pentagon-1 p {
+	margin: 0;
+	font-size: small;
+}
+
+.section-our-result {
+	padding-bottom: 5%;
+}
+
+/* Section Contact us
+		============================= */
+.section-contact-us {
+	background-color: white;
+	color: black;
+	margin-top: 40px;
+	margin: 0;
+}
+
+.section-contact-us h3 {
+	font-weight: var(--font-weight-semibold);
+}
+
+.section-contact-us .contact-form {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+/* Helpers
+		  ============================= */
+
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
+
+/* form
+		  ============================= */
+
+form,
+fieldset {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	border: 0;
+	margin: auto;
+
+}
+
+input,
+textarea {
+	border: 0;
+	border-bottom: 1px solid #979797;
+	width: 335px;
+	margin-bottom: 50px;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: #071629;
+	opacity: 1;
+	font-weight: var(--font-weight-semibold);
+
+}
+
+
+.form-field-container input,
+textarea {
+	border-bottom: 1px solid #979797;
+}
+
+.section-inner h3 {
+	margin-bottom: 50px;
+}
+
+
+
+/* Because inputs are invalid by default, we need to be careful and show the icon when we are not in focus and when when the input is not empty (placeholder-shown). Careful with this one because it is not supported everywhere. */
+
+input:required:invalid:not(:focus):not(:placeholder-shown)~.form-field-icon::after {
+	content: '✘';
+	color: red;
+}
+
+input:required:valid~.form-field-icon::after {
+	content: '✔';
+	color: green;
+}
+
+/* We want to hide the helper text when we are not in focus. The tilte allows us to select a sibling element in CSS */
+
+input:required:valid~.form-help {
+	max-height: 0;
+}
+
+/* Showing a border in a different color is good but not enough. For accessibility purposes, we added an icon when the input is valid or invalid to have a visual distinction that is not only color based.*/
+
+input:required:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown) {
+	border-bottom: 1px solid red;
+}
+
+input:required:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+	border-bottom: 1px solid green;
+}
+
+
+.contact-form {
+	padding-bottom: 15%;
+}
+
+/* footer
+		  ============================= */
+
+footer {
+	background-color: #071629;
+}
+
+.footer {
+	max-width: 1000px;
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+.footer-logo {
+	display: flex;
+	flex-basis: 85%;
+}
+
+.social {
+	display: flex;
+
+	justify-content: space-evenly;
+	padding-bottom: 30px;
+}
+
+.footer-icon-middle {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.copyright {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.3;
+}
+
+/* Media Queries
+		============================= */
+@media screen and (max-width: 549px) {
+	.section-icon {
+		display: block;
+	}
+
+	.header-container {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.nav-item {
+		padding: 0 0 2rem;
+	}
+
+	.header .menu-icon {
+		display: block;
+	}
+
+	.header-logo {
+		flex-basis: 70%;
+	}
+
+	.navbar-menu {
+		display: none;
+		flex: 1;
+	}
+
+	.header .nav {
+		flex-direction: column;
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.2s ease-out;
+	}
+
+	.header {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.block {
+		display: block;
+		justify-content: center;
+		margin: auto;
+	}
+
+	.footer-logo {
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+
+}
+
+@media screen and (min-width: 549px) and (max-width: 768px) {
+	.nav .nav-item+.nav-item {
+		margin-left: 4rem;
+	}
+
+	.section-icon {
+		margin: 10%;
+	}
+
+	.footer-logo {
+		justify-content: center;
+	}
+	.footer-logo {
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+	.nav .nav-item+.nav-item {
+		margin-left: 4rem;
+	}
+
+
+
+}
